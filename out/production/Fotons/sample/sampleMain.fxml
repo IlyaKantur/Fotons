@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="740.0" style="-fx-background-color: #e8e8e8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMain">
+  <children>
+    <MenuBar prefHeight="27.0" prefWidth="740.0" style="-fx-background-color: #d4d4d4; -fx-border-color: Gray;">
+      <menus>
+            <Menu mnemonicParsing="false" style="-fx-border-color: Gray;" text="Файл">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button mnemonicParsing="false" text="Button" />
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <Button mnemonicParsing="false" text="Button" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </Menu>
+        <Menu mnemonicParsing="false" style="-fx-border-color: Gray;" text="Обработка">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Delete" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" style="-fx-border-color: Gray;" text="Фон">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" style="-fx-border-color: Gray;" text="Границы">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+          </items>
+        </Menu>
+      </menus>
+      <opaqueInsets>
+        <Insets />
+      </opaqueInsets>
+    </MenuBar>
+  </children>
+</AnchorPane>
