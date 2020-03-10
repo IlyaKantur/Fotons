@@ -1,4 +1,4 @@
-package sample;
+package sample.Main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +10,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sampleMain.fxml"));
-        primaryStage.setTitle("Foton_Detect");
-        primaryStage.setScene(new Scene(root, 740, 560));
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        primaryStage.setTitle("Fotons Detect");
+        primaryStage.setScene(new Scene(root, 400, 400));
         primaryStage.show();
     }
     public static void main(String[] args) {
