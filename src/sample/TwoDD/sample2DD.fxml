@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.media.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -132,10 +133,11 @@
             </CustomMenuItem>
          </items>
       </MenuButton>
-      <ImageView fx:id="TestIm" fitHeight="278.0" fitWidth="276.0" layoutX="404.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="TestIm1" fitHeight="212.0" fitWidth="190.0" layoutX="290.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
       
-      <TextField fx:id="TextF" layoutX="250.0" layoutY="61.0" prefHeight="25.0" prefWidth="237.0" />
-      <TextArea fx:id="Tf" layoutX="14.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField fx:id="TextF" layoutX="8.0" layoutY="27.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextArea fx:id="Tf" layoutX="8.0" layoutY="52.0" prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fx:id="TestIm2" fitHeight="212.0" fitWidth="190.0" layoutX="480.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
 
       
   </children>

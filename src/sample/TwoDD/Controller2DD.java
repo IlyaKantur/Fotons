@@ -1,15 +1,18 @@
 package sample.TwoDD;
 
-import java.io.File;
-import java.io.FilenameFilter;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import javax.imageio.ImageIO;
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 
 import javax.swing.*;
 
@@ -52,7 +55,9 @@ public class Controller2DD {
     private CheckBox Delt;
 
     @FXML
-    private ImageView TestIm;
+    private ImageView TestIm1;
+    @FXML
+    private ImageView TestIm2;
 
     @FXML
     private Button Clear;
@@ -93,25 +98,81 @@ public class Controller2DD {
             file.setMultiSelectionEnabled(true);
             file.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
             file.setFileHidingEnabled(false);
+
             if (file.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                java.io.File f = file.getSelectedFile();
+
 //                System.err.println(f.getPath());
 //                Test.setText(f.getParent());
+                java.io.File f = file.getSelectedFile();
                 FilesBMP = f.list(new FilenameFilter() {
                     @Override
                     public boolean accept(File dir, String name) {
                         return name.endsWith(".bmp");
                     }
                 });
-                TextF.setText("Коллическво файлов: " + FilesBMP.length);
-                int i = 0;
-                for(String e :FilesBMP)
-                {
-                    Tf.appendText(e+"\n");
-                    i++;
-                }
             }
-            Fold.getScene().getWindow().hide();
+            java.io.File f = file.getSelectedFile();
+            TextF.setText("Коллическво файлов: " + FilesBMP.length);
+            int i = 0;
+            Comparator<String> stringLengthComparator = new StringLengthSort();
+            Arrays.sort(FilesBMP, stringLengthComparator);
+            for(String e :FilesBMP)
+            {
+                Tf.appendText(e+"\n");
+            }
+            ByteArrayOutputStream baos = new ByteArrayOutputStream(1000);
+            BufferedImage image = null;
+            try {
+                image = ImageIO.read(new File(f.getPath(), FilesBMP[0]));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // явно указываем расширение файла для простоты реализации
+            try {
+                ImageIO.write(image, "bmp", baos);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                baos.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            String base64String = Base64.encode(baos.toByteArray());
+            try {
+                baos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // декодируем полученную строку в массив байт
+            byte[] resByteArray = Base64.decode(base64String);
+
+            // считываем полученный массив в объект BufferedImage
+            BufferedImage resultImage = null;
+            try {
+                resultImage = ImageIO.read(new ByteArrayInputStream(resByteArray));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // сохраняем объект BufferedImage в виде нового изображения
+            try {
+                ImageIO.write(resultImage, "bpm", new File(String.valueOf(file.getParent()),"resultImage.bpm"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            String path = f.getPath() + "\\" + FilesBMP[0];
+            Image image1 = null;
+            try {
+                image1 = new Image(new FileInputStream(path));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            TestIm1.setImage(image1);
         });
     }
 }
