@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main.ControllerMain">
+   <children>
+      <ListView fx:id="MetodSpisok" layoutX="48.0" layoutY="29.0" prefHeight="343.0" prefWidth="311.0" />
+      <Button fx:id="OneDim" layoutX="162.0" layoutY="36.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Одномерный" />
+      <Button fx:id="TwoDim" layoutX="162.0" layoutY="95.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Двумерный" />
+   </children>
+</AnchorPane>

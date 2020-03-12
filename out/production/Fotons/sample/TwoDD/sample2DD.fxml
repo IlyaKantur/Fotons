@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="740.0" style="-fx-background-color: #e8e8e8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TwoDD.Controller2DD">
+  <children>
+      <MenuButton layoutY="2.0" mnemonicParsing="false" text="Файл">
+         <items>
+            <CustomMenuItem mnemonicParsing="false">
+                <content>
+                    <Button fx:id="Fold" mnemonicParsing="false" text="Расположение">
+                        <font>
+                            <Font name="Times New Roman" size="14.0" />
+                        </font>
+                    </Button>
+                </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+                <content>
+                    <Button fx:id="Save" mnemonicParsing="false" text="Сохранить">
+                        <font>
+                            <Font name="Times New Roman" size="14.0" />
+                        </font>
+                    </Button>
+                </content>
+            </CustomMenuItem>
+            <CustomMenuItem hideOnClick="false" mnemonicParsing="false">
+               <content>
+                <CheckBox fx:id="OnlyLast" text="Только Последний">
+                   <font>
+                       <Font name="Times New Roman" size="14.0" />
+                   </font>
+               </CheckBox>
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+                <content>
+                    <Button fx:id="Clear" mnemonicParsing="false" text="Очистка">
+                        <font>
+                            <Font name="Times New Roman" size="14.0" />
+                        </font>
+                    </Button>
+                </content>
+            </CustomMenuItem>
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="61.0" layoutY="2.0" mnemonicParsing="false" text="Обработка">
+         <items>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <CheckBox fx:id="Iter" mnemonicParsing="false" text="Ограничение" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <TextField fx:id="MaxIter" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <Button fx:id="Start" mnemonicParsing="false" text="Старт" />
+               </content>
+            </CustomMenuItem>
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="154.0" layoutY="2.0" mnemonicParsing="false" text="Фон">
+         <items>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <CheckBox fx:id="BF" mnemonicParsing="false" text="Без фона" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <CheckBox fx:id="Delt" mnemonicParsing="false" text="Вычет пикселя" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <TextField fx:id="DFon" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <CheckBox fx:id="BPIx" mnemonicParsing="false" text="Вычет битого" />
+               </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+               <content>
+                  <Button fx:id="Fonfold" mnemonicParsing="false" text="Фон" />
+               </content>
+            </CustomMenuItem>
+         </items>
+      </MenuButton>
+      <MenuButton layoutX="209.0" layoutY="2.0" mnemonicParsing="false" text="Границы">
+         <items>
+            <CustomMenuItem mnemonicParsing="false">
+              <content>
+                  <CheckBox fx:id="Gran" mnemonicParsing="false" text="Границы">
+                      <font>
+                          <Font name="Times New Roman" size="14.0" />
+                      </font>
+                  </CheckBox>
+              </content>
+            </CustomMenuItem>
+            <MenuItem mnemonicParsing="false" text="X" />
+            <CustomMenuItem mnemonicParsing="false">
+              <content>
+                  <TextField fx:id="Xx" />
+              </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+              <content>
+                  <TextField fx:id="XX" />
+              </content>
+            </CustomMenuItem>
+            <MenuItem mnemonicParsing="false" text="Y" />
+            <CustomMenuItem mnemonicParsing="false">
+              <content>
+                  <TextField fx:id="Yy" />
+              </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+              <content>
+                  <TextField fx:id="YY" />
+              </content>
+            </CustomMenuItem>
+         </items>
+      </MenuButton>
+      <ImageView fx:id="TestIm1" fitHeight="212.0" fitWidth="190.0" layoutX="290.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+      
+      <TextField fx:id="TextF" layoutX="8.0" layoutY="27.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextArea fx:id="Tf" layoutX="8.0" layoutY="52.0" prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fx:id="TestIm2" fitHeight="212.0" fitWidth="190.0" layoutX="480.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+
+      
+  </children>
+</AnchorPane>
