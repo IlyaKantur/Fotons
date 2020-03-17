@@ -41,7 +41,7 @@ public class ControllerMain {
             TwoDim.getScene().getWindow().hide();
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/TwoDD/sample2DD.fxml"));
+            loader.setLocation(getClass().getResource("/sample/TwoDD/Scena/sample2DD.fxml"));
 
             try {
                 loader.load();

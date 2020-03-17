@@ -1,4 +1,4 @@
-package sample.TwoDD;
+package sample.TwoDD.Class;
 
 import java.util.Comparator;
 
