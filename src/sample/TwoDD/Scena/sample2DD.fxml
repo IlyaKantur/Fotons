@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.media.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -21,15 +22,6 @@
                     </Button>
                 </content>
             </CustomMenuItem>
-            <CustomMenuItem mnemonicParsing="false">
-                <content>
-                    <Button fx:id="Save" mnemonicParsing="false" text="Сохранить">
-                        <font>
-                            <Font name="Times New Roman" size="14.0" />
-                        </font>
-                    </Button>
-                </content>
-            </CustomMenuItem>
             <CustomMenuItem hideOnClick="false" mnemonicParsing="false">
                <content>
                 <CheckBox fx:id="OnlyLast" text="Только Последний">
@@ -38,6 +30,15 @@
                    </font>
                </CheckBox>
                </content>
+            </CustomMenuItem>
+            <CustomMenuItem mnemonicParsing="false">
+                <content>
+                    <Button fx:id="Save" mnemonicParsing="false" text="Сохранить">
+                        <font>
+                            <Font name="Times New Roman" size="14.0" />
+                        </font>
+                    </Button>
+                </content>
             </CustomMenuItem>
             <CustomMenuItem mnemonicParsing="false">
                 <content>
@@ -139,6 +140,28 @@
       <TextArea fx:id="Tf" layoutX="8.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0" />
       <ImageView fx:id="TestIm2" fitHeight="212.0" fitWidth="190.0" layoutX="480.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
       <TextField fx:id="TextF2" layoutX="8.0" layoutY="52.0" prefHeight="25.0" prefWidth="200.0" />
+      <VBox layoutX="208.0" layoutY="239.0" prefHeight="322.0" prefWidth="529.0">
+         <children>
+            <HBox prefHeight="138.0" prefWidth="424.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="17.0" text="Y">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="CBA" prefHeight="25.0" prefWidth="145.0" />
+               </children>
+            </HBox>
+            <AreaChart fx:id="Areac" prefHeight="408.0" prefWidth="529.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </AreaChart>
+         </children>
+      </VBox>
 
       
   </children>
