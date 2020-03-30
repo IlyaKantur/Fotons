@@ -28,6 +28,7 @@ public class ControllerMain {
     @FXML
     private Button TwoDim;
 
+    public Stage stageDD = new Stage();
     @FXML
     void initialize()
     {
@@ -50,10 +51,10 @@ public class ControllerMain {
             }
 
             Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Two Dimension");
-            stage.showAndWait();
+
+            stageDD.setScene(new Scene(root));
+            stageDD.setTitle("Two Dimension");
+            stageDD.show();
         });
 
 

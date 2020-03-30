@@ -134,35 +134,23 @@
             </CustomMenuItem>
          </items>
       </MenuButton>
-      <ImageView fx:id="TestIm1" fitHeight="212.0" fitWidth="190.0" layoutX="290.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="TestIm1" fitHeight="230.0" fitWidth="230.0" layoutX="209.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
       
       <TextField fx:id="TextF" layoutX="8.0" layoutY="27.0" prefHeight="25.0" prefWidth="200.0" />
       <TextArea fx:id="Tf" layoutX="8.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0" />
-      <ImageView fx:id="TestIm2" fitHeight="212.0" fitWidth="190.0" layoutX="480.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="TestIm2" fitHeight="230.0" fitWidth="230.0" layoutX="422.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
       <TextField fx:id="TextF2" layoutX="8.0" layoutY="52.0" prefHeight="25.0" prefWidth="200.0" />
-      <VBox layoutX="208.0" layoutY="239.0" prefHeight="322.0" prefWidth="529.0">
+      <AnchorPane layoutX="8.0" layoutY="280.0" prefHeight="273.0" prefWidth="673.0">
          <children>
-            <HBox prefHeight="138.0" prefWidth="424.0">
-               <children>
-                  <Label prefHeight="17.0" prefWidth="17.0" text="Y">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <ComboBox fx:id="CBA" prefHeight="25.0" prefWidth="145.0" />
-               </children>
-            </HBox>
-            <AreaChart fx:id="Areac" prefHeight="408.0" prefWidth="529.0">
+            <LineChart fx:id="LC" layoutX="-9.0" layoutY="26.0" prefHeight="252.0" prefWidth="740.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <xAxis>
-                <NumberAxis side="BOTTOM" />
+                <CategoryAxis side="BOTTOM" />
               </xAxis>
               <yAxis>
                 <NumberAxis side="LEFT" />
               </yAxis>
-            </AreaChart>
+            </LineChart>
          </children>
-      </VBox>
-
-      
+      </AnchorPane>
   </children>
 </AnchorPane>
